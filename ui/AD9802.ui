@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1222</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>298</width>
+         <height>512</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,0,0,0,0,0">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>12</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>SETTINGS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="run_btn">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Run</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <selectedon>../images/run-c.png</selectedon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="file_path_label">
+             <property name="text">
+              <string>file_path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QToolButton" name="file_toolButton">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="clear_btn">
+             <property name="text">
+              <string>Clear</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <selectedon>../images/clear.png</selectedon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="file_path_lineinput"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="tool_label">
+             <property name="text">
+              <string>tool</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGroupBox" name="config_gbx">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>164</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>config</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="smpBitsMode_txt"/>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="memoryVol_txt"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="sectBits_txt"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="wordBits">
+             <property name="text">
+              <string>wordBits</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="sectNum">
+             <property name="text">
+              <string>sectNum</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="sectBits">
+             <property name="text">
+              <string>sectBits</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="memoryVol">
+             <property name="text">
+              <string>memoryVol</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="smpBitsMode">
+             <property name="text">
+              <string>smpBitsMode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="wordBits_txt"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="sectNum_txt"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-189</y>
+             <width>261</width>
+             <height>618</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>param</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetNoConstraint</enum>
+               </property>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="sideband_sig_input"/>
+               </item>
+               <item row="22" column="1">
+                <widget class="QLineEdit" name="sig_angle_input"/>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="fullscale_input"/>
+               </item>
+               <item row="15" column="0">
+                <widget class="QLabel" name="dbc_th_IL">
+                 <property name="text">
+                  <string>dbc_th_IL</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="Rl">
+                 <property name="text">
+                  <string>Rl</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="21" column="0">
+                <widget class="QLabel" name="refclk_ratio">
+                 <property name="text">
+                  <string>refclk_ratio</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLineEdit" name="Rl_input"/>
+               </item>
+               <item row="20" column="0">
+                <widget class="QLabel" name="imd_mode">
+                 <property name="text">
+                  <string>imd_mode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="sideband_input"/>
+               </item>
+               <item row="23" column="1">
+                <widget class="QLineEdit" name="dc_1f_noise_cancel_input"/>
+               </item>
+               <item row="18" column="1">
+                <widget class="QLineEdit" name="plot_option_input"/>
+               </item>
+               <item row="17" column="1">
+                <widget class="QLineEdit" name="ENOB_include_HD_input"/>
+               </item>
+               <item row="16" column="0">
+                <widget class="QLabel" name="dbc_th_SFDR">
+                 <property name="text">
+                  <string>dbc_th_SFDR</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="20" column="1">
+                <widget class="QComboBox" name="imd_mode_cmbox">
+                 <item>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="sideband_sig">
+                 <property name="text">
+                  <string>sideband_sig</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="sideband">
+                 <property name="text">
+                  <string>sideband</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="num_IMD">
+                 <property name="text">
+                  <string>num_IMD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="23" column="0">
+                <widget class="QLabel" name="dc_1f_noise_cancel">
+                 <property name="text">
+                  <string>dc_1f_noise_cancel</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="17" column="0">
+                <widget class="QLabel" name="ENOB_include_HD">
+                 <property name="text">
+                  <string>ENOB_include_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="21" column="1">
+                <widget class="QLineEdit" name="refclk_ratio_input"/>
+               </item>
+               <item row="8" column="1">
+                <widget class="QLineEdit" name="num_IMD_input"/>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="sigbw_input"/>
+               </item>
+               <item row="6" column="1">
+                <widget class="QLineEdit" name="num_interleave_input"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="dpdbw_input"/>
+               </item>
+               <item row="13" column="1">
+                <widget class="QLineEdit" name="dbc_th_HD_input"/>
+               </item>
+               <item row="11" column="1">
+                <widget class="QLineEdit" name="dacOSR_input"/>
+               </item>
+               <item row="13" column="0">
+                <widget class="QLabel" name="dbc_th_HD">
+                 <property name="text">
+                  <string>dbc_th_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="19" column="1">
+                <widget class="QLineEdit" name="figure_overwrite_input"/>
+               </item>
+               <item row="16" column="1">
+                <widget class="QLineEdit" name="dbc_th_SFDR_input"/>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="window">
+                 <property name="text">
+                  <string>window</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="sigbw">
+                 <property name="text">
+                  <string>sigbw</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="0">
+                <widget class="QLabel" name="plot_range">
+                 <property name="text">
+                  <string>plot_range</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1">
+                <widget class="QLineEdit" name="nyquitst_zone_input"/>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="num_HD">
+                 <property name="text">
+                  <string>num_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="num_interleave">
+                 <property name="text">
+                  <string>num_interleave</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="18" column="0">
+                <widget class="QLabel" name="plot_option">
+                 <property name="text">
+                  <string>plot_option</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="1">
+                <widget class="QLineEdit" name="plot_range_input"/>
+               </item>
+               <item row="14" column="1">
+                <widget class="QLineEdit" name="dbc_th_IMD_input"/>
+               </item>
+               <item row="7" column="1">
+                <widget class="QLineEdit" name="num_HD_input"/>
+               </item>
+               <item row="22" column="0">
+                <widget class="QLabel" name="sig_angle">
+                 <property name="text">
+                  <string>sig_angle</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="fullscale">
+                 <property name="text">
+                  <string>fullscale</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="19" column="0">
+                <widget class="QLabel" name="figure_overwrite">
+                 <property name="text">
+                  <string>figure_overwrite</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="11" column="0">
+                <widget class="QLabel" name="dacOSR">
+                 <property name="text">
+                  <string>dacOSR</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="15" column="1">
+                <widget class="QLineEdit" name="dbc_th_IL_input"/>
+               </item>
+               <item row="14" column="0">
+                <widget class="QLabel" name="dbc_th_IMD">
+                 <property name="text">
+                  <string>dbc_th_IMD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0">
+                <widget class="QLabel" name="nyquitst_zone">
+                 <property name="text">
+                  <string>nyquitst_zone</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="dpdbw">
+                 <property name="text">
+                  <string>dpdbw</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1">
+                <widget class="QLineEdit" name="window_input"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="Diagram">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>85</red>
+             <green>170</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>85</red>
+             <green>170</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>240</red>
+             <green>240</green>
+             <blue>240</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <attribute name="icon">
+        <iconset>
+         <selectedoff>../images/Diagram.png</selectedoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Diagram</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="diagram_label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../images/diagram_strut.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="FFT">
+       <attribute name="icon">
+        <iconset>
+         <selectedoff>../images/FFT.png</selectedoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>FFT</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="maximumSize">
+           <size>
+            <width>278</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>276</width>
+             <height>465</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="title">
+               <string>RESULTS 1 of 1</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QPushButton" name="reset_btn">
+                 <property name="text">
+                  <string>Reset</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <selectedoff>../images/reset.png</selectedoff>
+                  </iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="previous_btn">
+                 <property name="text">
+                  <string>Prev</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <selectedoff>../images/previous.png</selectedoff>
+                  </iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="next_btn">
+                 <property name="text">
+                  <string>Next</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <selectedoff>../images/next.png</selectedoff>
+                  </iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="title">
+               <string>Signal</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="1" column="1">
+                <widget class="QLabel" name="f1_amplitude_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="f1_frequency_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="f1_amplitude">
+                 <property name="text">
+                  <string>F1 Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="f2_amplitude">
+                 <property name="text">
+                  <string>F2 Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLabel" name="f2_frequency_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="f2_frequency">
+                 <property name="text">
+                  <string>F2 Frequency</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="f1_frequency">
+                 <property name="text">
+                  <string>F1 Frequency</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="f2_amplitude_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="Offset">
+                 <property name="text">
+                  <string>Offset</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLabel" name="Offset_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_6">
+              <property name="title">
+               <string>Specs</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="spec_tableWidget"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_7">
+              <property name="title">
+               <string>Spurs</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QTableWidget" name="spur_tableWidget"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fft_gragh">
+          <property name="title">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

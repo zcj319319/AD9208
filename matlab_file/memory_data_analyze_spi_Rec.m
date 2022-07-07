@@ -48,7 +48,7 @@ for smpVolIdx=1:smpVol
         sectIdx=floor((smpWordIdx-1)/sectWords) + 1+addNum;
         sectVolIdx=mod(smpVolIdx - 1,sectMemoryVol)+1;
         sectWordIdx=mod(smpWordIdx - 1, sectWords)+1;
-        %fprintf(id2, 'smpVolIdx=%10d, smpWordIdx=%10d',smpVolIdx, smpWordIdx);
+       
 %         fprintf('sectIdx=%10d, sectVolIdx=%10d, sectWordIdx=%10d\n',sectIdx, sectVolIdx, sectWordIdx);
         smpData(smpVolIdx, smpWordIdx)=dataStructMap(sectIdx,sectVolIdx,sectWordIdx);
     end

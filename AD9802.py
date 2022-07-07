@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1222, 554)
+        MainWindow.resize(1209, 636)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 298, 512))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 298, 594))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -39,6 +39,18 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout_5.setObjectName("gridLayout_5")
+        self.file_path_lineinput = QtWidgets.QLineEdit(self.groupBox)
+        self.file_path_lineinput.setObjectName("file_path_lineinput")
+        self.gridLayout_5.addWidget(self.file_path_lineinput, 1, 1, 1, 2)
+        self.tool_label = QtWidgets.QLabel(self.groupBox)
+        self.tool_label.setObjectName("tool_label")
+        self.gridLayout_5.addWidget(self.tool_label, 0, 0, 1, 1)
+        self.file_path_label = QtWidgets.QLabel(self.groupBox)
+        self.file_path_label.setObjectName("file_path_label")
+        self.gridLayout_5.addWidget(self.file_path_label, 1, 0, 1, 1)
+        self.file_toolButton = QtWidgets.QToolButton(self.groupBox)
+        self.file_toolButton.setObjectName("file_toolButton")
+        self.gridLayout_5.addWidget(self.file_toolButton, 1, 3, 1, 1)
         self.run_btn = QtWidgets.QPushButton(self.groupBox)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -50,24 +62,6 @@ class Ui_MainWindow(object):
         self.run_btn.setIcon(icon)
         self.run_btn.setObjectName("run_btn")
         self.gridLayout_5.addWidget(self.run_btn, 0, 1, 1, 1)
-        self.file_path_label = QtWidgets.QLabel(self.groupBox)
-        self.file_path_label.setObjectName("file_path_label")
-        self.gridLayout_5.addWidget(self.file_path_label, 1, 0, 1, 1)
-        self.file_toolButton = QtWidgets.QToolButton(self.groupBox)
-        self.file_toolButton.setObjectName("file_toolButton")
-        self.gridLayout_5.addWidget(self.file_toolButton, 1, 3, 1, 1)
-        self.clear_btn = QtWidgets.QPushButton(self.groupBox)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("images/clear.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
-        self.clear_btn.setIcon(icon1)
-        self.clear_btn.setObjectName("clear_btn")
-        self.gridLayout_5.addWidget(self.clear_btn, 0, 2, 1, 1)
-        self.file_path_lineinput = QtWidgets.QLineEdit(self.groupBox)
-        self.file_path_lineinput.setObjectName("file_path_lineinput")
-        self.gridLayout_5.addWidget(self.file_path_lineinput, 1, 1, 1, 2)
-        self.tool_label = QtWidgets.QLabel(self.groupBox)
-        self.tool_label.setObjectName("tool_label")
-        self.gridLayout_5.addWidget(self.tool_label, 0, 0, 1, 1)
         self.gridLayout_2.addWidget(self.groupBox, 1, 0, 1, 1)
         self.config_gbx = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.config_gbx.setMaximumSize(QtCore.QSize(16777215, 164))
@@ -104,12 +98,18 @@ class Ui_MainWindow(object):
         self.sectNum_txt = QtWidgets.QLineEdit(self.config_gbx)
         self.sectNum_txt.setObjectName("sectNum_txt")
         self.gridLayout_4.addWidget(self.sectNum_txt, 2, 1, 1, 1)
+        self.sample_rate = QtWidgets.QLabel(self.config_gbx)
+        self.sample_rate.setObjectName("sample_rate")
+        self.gridLayout_4.addWidget(self.sample_rate, 0, 0, 1, 1)
+        self.sample_rate_txt = QtWidgets.QLineEdit(self.config_gbx)
+        self.sample_rate_txt.setObjectName("sample_rate_txt")
+        self.gridLayout_4.addWidget(self.sample_rate_txt, 0, 1, 1, 1)
         self.gridLayout_2.addWidget(self.config_gbx, 3, 0, 1, 1)
         self.scrollArea_3 = QtWidgets.QScrollArea(self.scrollAreaWidgetContents)
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, -189, 261, 618))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 261, 618))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_2)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -295,116 +295,20 @@ class Ui_MainWindow(object):
         self.diagram_label.setAlignment(QtCore.Qt.AlignCenter)
         self.diagram_label.setObjectName("diagram_label")
         self.horizontalLayout_3.addWidget(self.diagram_label)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("images/Diagram.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        self.tabWidget.addTab(self.Diagram, icon1, "")
+        self.Help = QtWidgets.QWidget()
+        self.Help.setObjectName("Help")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.Help)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.textEdit = QtWidgets.QTextEdit(self.Help)
+        self.textEdit.setReadOnly(True)
+        self.textEdit.setObjectName("textEdit")
+        self.horizontalLayout_7.addWidget(self.textEdit)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("images/Diagram.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        self.tabWidget.addTab(self.Diagram, icon2, "")
-        self.FFT = QtWidgets.QWidget()
-        self.FFT.setObjectName("FFT")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.FFT)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.scrollArea_2 = QtWidgets.QScrollArea(self.FFT)
-        self.scrollArea_2.setMaximumSize(QtCore.QSize(278, 16777215))
-        self.scrollArea_2.setWidgetResizable(True)
-        self.scrollArea_2.setObjectName("scrollArea_2")
-        self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 276, 465))
-        self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.groupBox_4 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_4.setObjectName("groupBox_4")
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.groupBox_4)
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.reset_btn = QtWidgets.QPushButton(self.groupBox_4)
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("images/reset.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        self.reset_btn.setIcon(icon3)
-        self.reset_btn.setObjectName("reset_btn")
-        self.horizontalLayout_5.addWidget(self.reset_btn)
-        self.previous_btn = QtWidgets.QPushButton(self.groupBox_4)
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("images/previous.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        self.previous_btn.setIcon(icon4)
-        self.previous_btn.setObjectName("previous_btn")
-        self.horizontalLayout_5.addWidget(self.previous_btn)
-        self.next_btn = QtWidgets.QPushButton(self.groupBox_4)
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("images/next.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        self.next_btn.setIcon(icon5)
-        self.next_btn.setObjectName("next_btn")
-        self.horizontalLayout_5.addWidget(self.next_btn)
-        self.verticalLayout_2.addWidget(self.groupBox_4)
-        self.groupBox_5 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_5.setObjectName("groupBox_5")
-        self.gridLayout_6 = QtWidgets.QGridLayout(self.groupBox_5)
-        self.gridLayout_6.setObjectName("gridLayout_6")
-        self.f1_amplitude_text = QtWidgets.QLabel(self.groupBox_5)
-        self.f1_amplitude_text.setText("")
-        self.f1_amplitude_text.setObjectName("f1_amplitude_text")
-        self.gridLayout_6.addWidget(self.f1_amplitude_text, 1, 1, 1, 1)
-        self.f1_frequency_text = QtWidgets.QLabel(self.groupBox_5)
-        self.f1_frequency_text.setText("")
-        self.f1_frequency_text.setObjectName("f1_frequency_text")
-        self.gridLayout_6.addWidget(self.f1_frequency_text, 2, 1, 1, 1)
-        self.f1_amplitude = QtWidgets.QLabel(self.groupBox_5)
-        self.f1_amplitude.setObjectName("f1_amplitude")
-        self.gridLayout_6.addWidget(self.f1_amplitude, 1, 0, 1, 1)
-        self.f2_amplitude = QtWidgets.QLabel(self.groupBox_5)
-        self.f2_amplitude.setObjectName("f2_amplitude")
-        self.gridLayout_6.addWidget(self.f2_amplitude, 3, 0, 1, 1)
-        self.f2_frequency_text = QtWidgets.QLabel(self.groupBox_5)
-        self.f2_frequency_text.setText("")
-        self.f2_frequency_text.setObjectName("f2_frequency_text")
-        self.gridLayout_6.addWidget(self.f2_frequency_text, 4, 1, 1, 1)
-        self.f2_frequency = QtWidgets.QLabel(self.groupBox_5)
-        self.f2_frequency.setObjectName("f2_frequency")
-        self.gridLayout_6.addWidget(self.f2_frequency, 4, 0, 1, 1)
-        self.f1_frequency = QtWidgets.QLabel(self.groupBox_5)
-        self.f1_frequency.setObjectName("f1_frequency")
-        self.gridLayout_6.addWidget(self.f1_frequency, 2, 0, 1, 1)
-        self.f2_amplitude_text = QtWidgets.QLabel(self.groupBox_5)
-        self.f2_amplitude_text.setText("")
-        self.f2_amplitude_text.setObjectName("f2_amplitude_text")
-        self.gridLayout_6.addWidget(self.f2_amplitude_text, 3, 1, 1, 1)
-        self.Offset = QtWidgets.QLabel(self.groupBox_5)
-        self.Offset.setObjectName("Offset")
-        self.gridLayout_6.addWidget(self.Offset, 5, 0, 1, 1)
-        self.Offset_text = QtWidgets.QLabel(self.groupBox_5)
-        self.Offset_text.setText("")
-        self.Offset_text.setObjectName("Offset_text")
-        self.gridLayout_6.addWidget(self.Offset_text, 5, 1, 1, 1)
-        self.verticalLayout_2.addWidget(self.groupBox_5)
-        self.groupBox_6 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_6.setObjectName("groupBox_6")
-        self.gridLayout_7 = QtWidgets.QGridLayout(self.groupBox_6)
-        self.gridLayout_7.setObjectName("gridLayout_7")
-        self.spec_tableWidget = QtWidgets.QTableWidget(self.groupBox_6)
-        self.spec_tableWidget.setObjectName("spec_tableWidget")
-        self.spec_tableWidget.setColumnCount(0)
-        self.spec_tableWidget.setRowCount(0)
-        self.gridLayout_7.addWidget(self.spec_tableWidget, 0, 0, 1, 1)
-        self.verticalLayout_2.addWidget(self.groupBox_6)
-        self.groupBox_7 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_7.setObjectName("groupBox_7")
-        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.groupBox_7)
-        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.spur_tableWidget = QtWidgets.QTableWidget(self.groupBox_7)
-        self.spur_tableWidget.setObjectName("spur_tableWidget")
-        self.spur_tableWidget.setColumnCount(0)
-        self.spur_tableWidget.setRowCount(0)
-        self.horizontalLayout_6.addWidget(self.spur_tableWidget)
-        self.verticalLayout_2.addWidget(self.groupBox_7)
-        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_3)
-        self.horizontalLayout_4.addWidget(self.scrollArea_2)
-        self.fft_gragh = QtWidgets.QGroupBox(self.FFT)
-        self.fft_gragh.setTitle("")
-        self.fft_gragh.setObjectName("fft_gragh")
-        self.horizontalLayout_4.addWidget(self.fft_gragh)
-        self.horizontalLayout_4.setStretch(0, 1)
-        self.horizontalLayout_4.setStretch(1, 2)
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("images/FFT.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        self.tabWidget.addTab(self.FFT, icon6, "")
+        icon2.addPixmap(QtGui.QPixmap("images/Help.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        self.tabWidget.addTab(self.Help, icon2, "")
         self.horizontalLayout_2.addWidget(self.tabWidget)
         self.horizontalLayout_2.setStretch(0, 1)
         self.horizontalLayout_2.setStretch(1, 3)
@@ -416,22 +320,56 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.run_btn, self.file_path_lineinput)
+        MainWindow.setTabOrder(self.file_path_lineinput, self.file_toolButton)
+        MainWindow.setTabOrder(self.file_toolButton, self.smpBitsMode_txt)
+        MainWindow.setTabOrder(self.smpBitsMode_txt, self.sectNum_txt)
+        MainWindow.setTabOrder(self.sectNum_txt, self.sectBits_txt)
+        MainWindow.setTabOrder(self.sectBits_txt, self.wordBits_txt)
+        MainWindow.setTabOrder(self.wordBits_txt, self.memoryVol_txt)
+        MainWindow.setTabOrder(self.memoryVol_txt, self.sigbw_input)
+        MainWindow.setTabOrder(self.sigbw_input, self.dpdbw_input)
+        MainWindow.setTabOrder(self.dpdbw_input, self.sideband_input)
+        MainWindow.setTabOrder(self.sideband_input, self.sideband_sig_input)
+        MainWindow.setTabOrder(self.sideband_sig_input, self.fullscale_input)
+        MainWindow.setTabOrder(self.fullscale_input, self.Rl_input)
+        MainWindow.setTabOrder(self.Rl_input, self.num_interleave_input)
+        MainWindow.setTabOrder(self.num_interleave_input, self.num_HD_input)
+        MainWindow.setTabOrder(self.num_HD_input, self.num_IMD_input)
+        MainWindow.setTabOrder(self.num_IMD_input, self.window_input)
+        MainWindow.setTabOrder(self.window_input, self.nyquitst_zone_input)
+        MainWindow.setTabOrder(self.nyquitst_zone_input, self.dacOSR_input)
+        MainWindow.setTabOrder(self.dacOSR_input, self.plot_range_input)
+        MainWindow.setTabOrder(self.plot_range_input, self.dbc_th_HD_input)
+        MainWindow.setTabOrder(self.dbc_th_HD_input, self.dbc_th_IMD_input)
+        MainWindow.setTabOrder(self.dbc_th_IMD_input, self.dbc_th_IL_input)
+        MainWindow.setTabOrder(self.dbc_th_IL_input, self.dbc_th_SFDR_input)
+        MainWindow.setTabOrder(self.dbc_th_SFDR_input, self.ENOB_include_HD_input)
+        MainWindow.setTabOrder(self.ENOB_include_HD_input, self.plot_option_input)
+        MainWindow.setTabOrder(self.plot_option_input, self.figure_overwrite_input)
+        MainWindow.setTabOrder(self.figure_overwrite_input, self.imd_mode_cmbox)
+        MainWindow.setTabOrder(self.imd_mode_cmbox, self.refclk_ratio_input)
+        MainWindow.setTabOrder(self.refclk_ratio_input, self.sig_angle_input)
+        MainWindow.setTabOrder(self.sig_angle_input, self.dc_1f_noise_cancel_input)
+        MainWindow.setTabOrder(self.dc_1f_noise_cancel_input, self.scrollArea)
+        MainWindow.setTabOrder(self.scrollArea, self.scrollArea_3)
+        MainWindow.setTabOrder(self.scrollArea_3, self.tabWidget)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "SETTINGS"))
-        self.run_btn.setText(_translate("MainWindow", "Run"))
+        self.tool_label.setText(_translate("MainWindow", "tool"))
         self.file_path_label.setText(_translate("MainWindow", "file_path"))
         self.file_toolButton.setText(_translate("MainWindow", "..."))
-        self.clear_btn.setText(_translate("MainWindow", "Clear"))
-        self.tool_label.setText(_translate("MainWindow", "tool"))
+        self.run_btn.setText(_translate("MainWindow", "Run"))
         self.config_gbx.setTitle(_translate("MainWindow", "config"))
         self.wordBits.setText(_translate("MainWindow", "wordBits"))
         self.sectNum.setText(_translate("MainWindow", "sectNum"))
         self.sectBits.setText(_translate("MainWindow", "sectBits"))
         self.memoryVol.setText(_translate("MainWindow", "memoryVol"))
         self.smpBitsMode.setText(_translate("MainWindow", "smpBitsMode"))
+        self.sample_rate.setText(_translate("MainWindow", "sample_rate"))
         self.groupBox_3.setTitle(_translate("MainWindow", "param"))
         self.dbc_th_IL.setText(_translate("MainWindow", "dbc_th_IL"))
         self.Rl.setText(_translate("MainWindow", "Rl"))
@@ -460,16 +398,149 @@ class Ui_MainWindow(object):
         self.nyquitst_zone.setText(_translate("MainWindow", "nyquitst_zone"))
         self.dpdbw.setText(_translate("MainWindow", "dpdbw"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Diagram), _translate("MainWindow", "Diagram"))
-        self.groupBox_4.setTitle(_translate("MainWindow", "RESULTS 1 of 1"))
-        self.reset_btn.setText(_translate("MainWindow", "Reset"))
-        self.previous_btn.setText(_translate("MainWindow", "Prev"))
-        self.next_btn.setText(_translate("MainWindow", "Next"))
-        self.groupBox_5.setTitle(_translate("MainWindow", "Signal"))
-        self.f1_amplitude.setText(_translate("MainWindow", "F1 Amplitude"))
-        self.f2_amplitude.setText(_translate("MainWindow", "F2 Amplitude"))
-        self.f2_frequency.setText(_translate("MainWindow", "F2 Frequency"))
-        self.f1_frequency.setText(_translate("MainWindow", "F1 Frequency"))
-        self.Offset.setText(_translate("MainWindow", "Offset"))
-        self.groupBox_6.setTitle(_translate("MainWindow", "Specs"))
-        self.groupBox_7.setTitle(_translate("MainWindow", "Spurs"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.FFT), _translate("MainWindow", "FFT"))
+        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% vin            input</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% fs             total sample rate , for dac, fs=actual dac fs*dacOSR</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% resolution     adc resolution,resolution=0 for dac</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% sigbw          noise calc bw</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% dpdbw          noise calc bw</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% sideband       +/-sideband for every tone, default 100KHz</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% resolution     adc resolution,resolution=0 for dac</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% fullscale      voltage fullscale, mvpp</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% Rl             equivalent R load,default 100ohm</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% num_interleave </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% num_HD</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% window         \'non\' \'hann\' \'black\'</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% nyquitst_zone  for rfadc, use this to set correct freq range;for dac set to 1 to avoid errors</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% dacOSR         for dac simulation only, only HD/IL fold to first nyquist zone will be calc/marked</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% plot_range     for dac, 0 \'full\' zone , 1 first , 2 first+sencond...</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% dbc_th_HD dbc_th_IMD dbc_th_IL dbc_th_SFDR  threshold for whether highlight relative values</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% ENOB_include_HD   whether ENOB include HD</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% plot_option       plot figure or not</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% figure_overwrite  if overwrite=1 figure will always use figure 1 to overwrite last plot</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff5500;\">% dc_1f_noise_cancel=20e6; </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%para%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'sigbw\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sigbw=para.sigbw;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sigbw=[0 fs/2];</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dpdbw\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dpdbw=para.dpdbw;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dpdbw=[0 fs/2];</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'sideband\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sideband=para.sideband;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sideband=100e3;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'sideband_sig\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sideband_sig=para.sideband_sig;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sideband_sig=100e3;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'fullscale\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    fullscale=para.fullscale;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    fullscale=1000;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'Rl\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    Rl=para.Rl;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    Rl=100;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'num_interleave\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_interleave=para.num_interleave;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_interleave=1;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'num_HD\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_HD=para.num_HD;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_HD=7;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'num_IMD\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_IMD=para.num_IMD;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    num_IMD=5;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'window\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    window=para.window;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    window=\'non\';</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'nyquitst_zone\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    nyquist_zone=para.nyquitst_zone;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    nyquist_zone=1;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dacOSR\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dacOSR=para.dacOSR;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dacOSR=1;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'plot_range\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    plot_range=para.plot_range;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    plot_range=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dbc_th_HD\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_HD=para.dbc_th_HD;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_HD=-70;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dbc_th_IMD\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_IMD=para.dbc_th_IMD;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_IMD=-70;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dbc_th_IL\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_IL=para.dbc_th_IL;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_IL=-70;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dbc_th_SFDR\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_SFDR=para.dbc_th_SFDR;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dbc_th_SFDR=70;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'ENOB_include_HD\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    ENOB_include_HD=para.ENOB_include_HD;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    ENOB_include_HD=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'plot_option\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    plot_option=para.plot_option;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    plot_option=1;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'figure_overwrite\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    figure_overwrite=para.figure_overwrite;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    figure_overwrite=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'imd_mode\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    imd_mode=para.imd_mode;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    imd_mode=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'refclk_ratio\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    refclk_ratio=para.refclk_ratio;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    refclk_ratio=1;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'sig_angle\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sig_angle=para.sig_angle;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    sig_angle=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if isfield(para,\'dc_1f_noise_cancel\')</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dc_1f_noise_cancel=para.dc_1f_noise_cancel;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">else</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">    dc_1f_noise_cancel=0;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">end      %% add cancel dc  and 1/f noise</p></body></html>"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Help), _translate("MainWindow", "Help"))
